@@ -1,0 +1,19 @@
+
+// Основная программа
+class Program
+{
+    static void Main(string[] args)
+    {
+        // Создаем объект класса Dog
+        Animal dog = new Dog("Buddy", 3);
+        Console.WriteLine($"Dog: {dog.Name}, Age: {dog.Age}"); // Выводим информацию о собаке
+        dog.MakeSound(); // Вызов метода MakeSound для собаки
+        dog.Move(); // Вызов метода Move для собаки
+
+        // Создаем объект класса Cat
+        Animal cat = new Cat("Whiskers", 2);
+        Console.WriteLine($"Cat: {cat.Name}, Age: {cat.Age}"); // Выводим информацию о кошке
+        cat.MakeSound(); // Вызов метода MakeSound для кошки
+        cat.Move(); // Вызов метода Move для кошки
+    }
+}

@@ -1,0 +1,9 @@
+Вывод:
+Dog: Buddy, Age: 3
+Bark
+Dog is running
+Cat: Whiskers, Age: 2
+Meow
+Cat is walking
+
+=== Code Execution Successful ===

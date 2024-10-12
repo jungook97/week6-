@@ -1,0 +1,70 @@
+Дайыржанова Диана ИС231(4)     
+Week5
+Вариант 1
+using System;
+
+// Абстрактный класс Animal, который содержит общие свойства и методы для всех животных
+public abstract class Animal
+{
+    // Поле для имени животного
+    public string Name { get; set; }
+
+    // Поле для возраста животного
+    public int Age { get; set; }
+
+    // Конструктор, который принимает имя и возраст животного
+    public Animal(string name, int age)
+    {
+        Name = name; // Устанавливаем имя животного
+        Age = age; // Устанавливаем возраст животного
+    }
+
+    // Абстрактный метод MakeSound, который должен быть реализован в классах-наследниках
+    public abstract void MakeSound();
+
+    // Абстрактный метод Move, который должен быть реализован в классах-наследниках
+    public abstract void Move();
+}
+
+// Класс Dog, который наследует от абстрактного класса Animal
+public class Dog : Animal
+{
+    // Конструктор класса Dog, который передает параметры в базовый класс Animal
+    public Dog(string name, int age) : base(name, age)
+    {
+    }
+
+    // Реализация абстрактного метода MakeSound для класса Dog
+    public override void MakeSound()
+    {
+        Console.WriteLine("Bark"); // Собака издает звук "Bark"
+    }
+
+    // Реализация абстрактного метода Move для класса Dog
+    public override void Move()
+    {
+        Console.WriteLine("Dog is running"); // Собака бежит
+    }
+}
+
+// Класс Cat, который наследует от абстрактного класса Animal
+public class Cat : Animal
+{
+    // Конструктор класса Cat, который передает параметры в базовый класс Animal
+    public Cat(string name, int age) : base(name, age)
+    {
+    }
+
+    // Реализация абстрактного метода MakeSound для класса Cat
+    public override void MakeSound()
+    {
+        Console.WriteLine("Meow"); // Кошка издает звук "Meow"
+    }
+
+    // Реализация абстрактного метода Move для класса Cat
+    public override void Move()
+    {
+        Console.WriteLine("Cat is walking"); // Кошка идет
+    }
+}
+
